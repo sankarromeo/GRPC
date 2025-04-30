@@ -129,10 +129,16 @@ cd gatling-performance-test
 - [Protocol Buffers](https://developers.google.com/protocol-buffers)
 - [Gatling Performance Tool](https://gatling.io/)
 
+https://www.baeldung.com/spring-boot-grpc
+https://github.com/TechPrimers/grpc-spring-boot-example?tab=readme-ov-file
+https://yidongnan.github.io/grpc-spring-boot-starter/en/server/getting-started.html
+https://github.com/rformagio/java-grpc
+
 ---
 
 ## 👨‍💻 Author
 
-**Sankar J**  
+**Sankar J**
+
 📧 [genisankar@gmail.com](mailto:genisankar@gmail.com)  
 
