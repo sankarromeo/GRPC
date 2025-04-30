@@ -92,3 +92,59 @@ We’ll use **Gatling** to load test both the gRPC and REST endpoints and compar
 
 ```bash
 protoc --java_out=grpc-server/src/main/java --grpc-java_out=grpc-server/src/main/java proto/greeting.proto
+
+
+📦 How to Run the POC
+📌 Prerequisites
+Java 17+
+
+Maven
+
+Docker (if running containers)
+
+Gatling
+
+Tools for testing: BloomRPC / Postman (with gRPC plugin)
+
+🛠️ Steps to Run
+Compile .proto Files
+
+bash
+Copy
+Edit
+protoc --java_out=grpc-server/src/main/java --grpc-java_out=grpc-server/src/main/java proto/greeting.proto
+Run the gRPC Server
+
+bash
+Copy
+Edit
+cd grpc-server
+./mvnw spring-boot:run
+Run the gRPC Client
+
+bash
+Copy
+Edit
+cd grpc-client
+./mvnw spring-boot:run
+Run the gRPC Gateway
+
+bash
+Copy
+Edit
+cd grpc-gateway
+./mvnw spring-boot:run
+Run the REST API Server
+
+bash
+Copy
+Edit
+cd rest-api
+./mvnw spring-boot:run
+Execute the Gatling Performance Test
+
+bash
+Copy
+Edit
+cd gatling-performance-test
+./mvnw gatling:test
