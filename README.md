@@ -1,4 +1,4 @@
-# gRPC vs REST API POC 🚀
+ gRPC vs REST API POC 🚀
 
 This project is a Proof of Concept (POC) to demonstrate the differences between **gRPC** and **REST APIs**, covering:
 - Creating a **gRPC Server and Client**
@@ -90,61 +90,49 @@ We’ll use **Gatling** to load test both the gRPC and REST endpoints and compar
 
 1. **Compile proto files**
 
-```bash
 protoc --java_out=grpc-server/src/main/java --grpc-java_out=grpc-server/src/main/java proto/greeting.proto
 
-
-📦 How to Run the POC
-📌 Prerequisites
-Java 17+
-
-Maven
-
-Docker (if running containers)
-
-Gatling
-
-Tools for testing: BloomRPC / Postman (with gRPC plugin)
-
-🛠️ Steps to Run
-Compile .proto Files
-
-bash
-Copy
-Edit
-protoc --java_out=grpc-server/src/main/java --grpc-java_out=grpc-server/src/main/java proto/greeting.proto
-Run the gRPC Server
-
-bash
-Copy
-Edit
-cd grpc-server
+2. Run the gRPC Server
+  cd grpc-server
 ./mvnw spring-boot:run
-Run the gRPC Client
 
-bash
-Copy
-Edit
+3. Run the gRPC Client
 cd grpc-client
 ./mvnw spring-boot:run
-Run the gRPC Gateway
 
-bash
-Copy
-Edit
+4. Run the gRPC Gateway
 cd grpc-gateway
 ./mvnw spring-boot:run
-Run the REST API Server
 
-bash
-Copy
-Edit
-cd rest-api
+
+5. Run the REST API Server
+   cd rest-api
 ./mvnw spring-boot:run
-Execute the Gatling Performance Test
 
-bash
-Copy
-Edit
+6. Execute the Gatling Performance Test
 cd gatling-performance-test
 ./mvnw gatling:test
+
+
+## 📚 Learnings from this POC
+
+- **gRPC outperforms REST** for internal microservices communication.
+- **gRPC Gateway bridges the browser-client gap** efficiently.
+- **Performance tests reveal clear latency and throughput advantages** for gRPC.
+- **Streaming and binary serialization improve resource utilization** and network efficiency.
+
+---
+
+## 📜 References
+
+- [gRPC Official Docs](https://grpc.io/docs/)
+- [Protocol Buffers](https://developers.google.com/protocol-buffers)
+- [Gatling Performance Tool](https://gatling.io/)
+
+---
+
+## 👨‍💻 Author
+
+**Sankar J**  
+📧 [genisankar@gmail.com](mailto:genisankar@gmail.com)  
+
